@@ -24,7 +24,7 @@ U_NP,              U_NP,              LT(U_MEDIA,KC_ESC),LT(U_NAV,KC_SPC),  LT(U
 #define MIRYOKU_ALTERNATIVES_BASE_GRAPHITE \
 KC_B,              KC_L,              KC_D,              KC_W,              KC_Z,              KC_QUOT,              KC_F,              KC_O,              KC_U,              KC_J,           \
 LGUI_T(KC_N),      LALT_T(KC_R),      LCTL_T(KC_T),      LSFT_T(KC_S),      KC_G,              KC_Y,              LSFT_T(KC_H),      LCTL_T(KC_A),      LALT_T(KC_E),      LGUI_T(KC_I),      \
-LT(U_BUTTON,KC_Q), ALGR_T(KC_X),      KC_M,              KC_C,              KC_V,              KC_K,              KC_P,              KC_DOT,           ALGR_T(KC_MINS),    LT(U_BUTTON,KC_SLSH),\
+LT(U_BUTTON,KC_Q), ALGR_T(KC_X),      KC_M,              KC_C,              KC_V,              KC_K,              KC_P,              KC_COMM,           ALGR_T(KC_DOT),    LT(U_BUTTON,KC_SLSH),\
 U_NP,              U_NP,              LT(U_MEDIA,KC_ESC),LT(U_NAV,KC_SPC),  LT(U_MOUSE,KC_TAB),LT(U_SYM,KC_ENT),  LT(U_NUM,KC_BSPC), LT(U_FUN,KC_DEL),  U_NP,              U_NP
 
 
