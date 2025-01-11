@@ -26,6 +26,7 @@ enum layers {
     SYM,
     NUM,
     FUN,
+    NAV,
     WIN,
     BUT,
 };
@@ -42,6 +43,7 @@ enum layers {
 #define BUT_Q LT(BUT, KC_Q)
 #define BUT_SLSH LT(BUT, KC_SLSH)
 
+#define NAV_SPC LT(NAV, KC_SPC)
 #define SYM_ENT LT(SYM, KC_ENT)
 #define NUM_BSPC LT(NUM, KC_BSPC)
 #define FUN_DEL LT(FUN, KC_DEL)
@@ -52,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_B,         KC_L,    KC_D,    KC_W,    KC_Z, XXXXXXX,    XXXXXXX,    KC_QUOT,    KC_F,      KC_O,   KC_U,            KC_J,
         HOME_N,       HOME_R,  HOME_S,  HOME_T,    KC_G, XXXXXXX,    XXXXXXX,    KC_Y,       HOME_H,    HOME_A,  HOME_E,         HOME_I,
          BUT_Q, ALGR_T(KC_X),    KC_M,    KC_C,    KC_V,                         KC_K,      KC_P,       KC_COMM,  ALGR_T(KC_DOT), BUT_SLSH,
-                               KC_ESC,  KC_SPC, KC_TAB,                       SYM_ENT,     NUM_BSPC,    FUN_DEL
+                               KC_ESC,  NAV_SPC, KC_TAB,                       SYM_ENT,     NUM_BSPC,    FUN_DEL
     ),
 
     [SYM] = LAYOUT_LR( // Symbol
@@ -70,10 +72,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [FUN] = LAYOUT_LR( // Function
-        KC_F12,    KC_F7,     KC_F8,   KC_F9,    KC_PSCR,  XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX,
+        KC_F12,    KC_F7,     KC_F8,   KC_F9,    KC_PSCR,  QK_BOOT,          XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX,
         KC_F11,    KC_F4,      KC_F5,   KC_F6,    KC_SCRL,  XXXXXXX,          XXXXXXX, XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT,  KC_LGUI,
         KC_F10,    KC_F1,     KC_F2,     KC_F3,    KC_PAUS,                             XXXXXXX, XXXXXXX, XXXXXXX, KC_ALGR, XXXXXXX,
                                               KC_APP,  KC_SPC,  KC_TAB,          XXXXXXX, XXXXXXX, _______
+    ),
+
+    [NAV] = LAYOUT_LR( // Navigation
+        XXXXXXX,    XXXXXXX,     XXXXXXX,   XXXXXXX,    XXXXXXX,  XXXXXXX,          XXXXXXX, KC_AGIN, S(KC_INS),  C(KC_INS), S(KC_DEL), KC_UNDO,
+        KC_LGUI,    KC_LALT,    KC_LCTL,   KC_LSFT,    XXXXXXX,  XXXXXXX,          XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,  KC_RIGHT,
+        XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX,  XXXXXXX,                             KC_INS, KC_HOME, KC_PGDN, KC_PGUP, KC_END,
+                                              XXXXXXX,  _______,  XXXXXXX,          XXXXXXX, XXXXXXX, _______
     ),
   //   [2] = LAYOUT_split_3x6_3(
   // //,-----------------------------------------------------.                    ,-----------------------------------------------------.
