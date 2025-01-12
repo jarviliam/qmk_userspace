@@ -16,44 +16,17 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "keycodes.h"
 #include QMK_KEYBOARD_H
 
 #include "layout.h"
-
-enum layers {
-    BASE,
-    SYM,
-    NUM,
-    FUN,
-    NAV,
-    WIN,
-    BUT,
-};
-
-#define HOME_N LGUI_T(KC_N)
-#define HOME_R LALT_T(KC_R)
-#define HOME_T LCTL_T(KC_T)
-#define HOME_S LSFT_T(KC_S)
-#define HOME_H LSFT_T(KC_H)
-#define HOME_A LCTL_T(KC_A)
-#define HOME_E LALT_T(KC_E)
-#define HOME_I LGUI_T(KC_I)
-
-#define BUT_Q LT(BUT, KC_Q)
-#define BUT_SLSH LT(BUT, KC_SLSH)
-
-#define NAV_SPC LT(NAV, KC_SPC)
-#define SYM_ENT LT(SYM, KC_ENT)
-#define NUM_BSPC LT(NUM, KC_BSPC)
-#define FUN_DEL LT(FUN, KC_DEL)
+#include "jarviliam.c"
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [BASE] = LAYOUT_LR( // Base: Grapite.
           KC_B,         KC_L,    KC_D,    KC_W,    KC_Z, XXXXXXX,    XXXXXXX,    KC_QUOT,    KC_F,      KC_O,   KC_U,            KC_J,
-        HOME_N,       HOME_R,  HOME_S,  HOME_T,    KC_G, XXXXXXX,    XXXXXXX,    KC_Y,       HOME_H,    HOME_A,  HOME_E,         HOME_I,
-         BUT_Q, ALGR_T(KC_X),    KC_M,    KC_C,    KC_V,                         KC_K,      KC_P,       KC_COMM,  ALGR_T(KC_DOT), BUT_SLSH,
+        HOME_N,       HOME_R,  HOME_T, HOME_S,     KC_G, XXXXXXX,    XXXXXXX,    KC_Y,       HOME_H,    HOME_A,  HOME_E,         HOME_I,
+         WIN_Q, ALGR_T(KC_X),    KC_M,    KC_C,    KC_V,                         KC_K,      KC_P,       KC_COMM,  ALGR_T(KC_DOT), WIN_SLSH,
                                KC_ESC,  NAV_SPC, KC_TAB,                       SYM_ENT,     NUM_BSPC,    FUN_DEL
     ),
 
@@ -82,29 +55,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX,    XXXXXXX,     XXXXXXX,   XXXXXXX,    XXXXXXX,  XXXXXXX,          XXXXXXX, KC_AGIN, S(KC_INS),  C(KC_INS), S(KC_DEL), KC_UNDO,
         KC_LGUI,    KC_LALT,    KC_LCTL,   KC_LSFT,    XXXXXXX,  XXXXXXX,          XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,  KC_RIGHT,
         XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX,  XXXXXXX,                             KC_INS, KC_HOME, KC_PGDN, KC_PGUP, KC_END,
-                                              XXXXXXX,  _______,  XXXXXXX,          XXXXXXX, XXXXXXX, _______
+                                              XXXXXXX,  _______,  XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX
     ),
-  //   [2] = LAYOUT_split_3x6_3(
-  // //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-  //      KC_TAB, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSPC,
-  // //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-  //     KC_LCTL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_MINS,  KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS,  KC_GRV,
-  // //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-  //     KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, KC_TILD,
-  // //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-  //                                         KC_LGUI,   MO(3),  KC_SPC,     KC_ENT, _______, KC_RALT
-  //                                     //`--------------------------'  `--------------------------'
-  // ),
-  //
-  //   [3] = LAYOUT_split_3x6_3(
-  // //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-  //     QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  // //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-  //     RM_TOGG, RM_HUEU, RM_SATU, RM_VALU, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  // //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-  //     RM_NEXT, RM_HUED, RM_SATD, RM_VALD, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  // //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-  //                                         KC_LGUI, _______,  KC_SPC,     KC_ENT, _______, KC_RALT
-  //                                     //`--------------------------'  `--------------------------'
-  // )
+
+    [WIN] = LAYOUT_LR( // Window
+        XXXXXXX,    XXXXXXX,     XXXXXXX,   XXXXXXX,    XXXXXXX,  XXXXXXX,          XXXXXXX, G(KC_TAB), G(KC_8),  G(KC_9), G(KC_4), KC_UNDO,
+        KC_LGUI,    KC_LALT,    KC_LCTL,   KC_LSFT,    XXXXXXX,  XXXXXXX,          XXXXXXX, G(S(KC_LEFT)), G(KC_1), G(KC_2), G(KC_3),  G(S(KC_RIGHT)),
+        _______, XXXXXXX,   XXXXXXX, XXXXXXX,  XXXXXXX,                             XXXXXXX, G(KC_7), G(KC_6), G(KC_5), XXXXXXX,
+                                              XXXXXXX,  XXXXXXX,  XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX
+    ),
+    [RSYM] = LAYOUT_LR( // Revised Symbol
+        XXXXXXX,    KC_LABK,     KC_RABK,   KC_BSLS,    KC_GRV,  XXXXXXX,          XXXXXXX, KC_AMPR, KC_MINS,  KC_LBRC, KC_RBRC, _______,
+        KC_EXLM,    KC_MINS,    KC_PLUS,   KC_EQL,    KC_HASH,  XXXXXXX,          XXXXXXX, KC_PIPE, KC_COLN, KC_LPRN, KC_RPRN,  KC_PERC,
+        XXXXXXX, KC_SLSH,   KC_ASTR, KC_CIRC,  XXXXXXX,                                     KC_TILD, KC_DLR, KC_LCBR, KC_RCBR, _______,
+                                              XXXXXXX,  XXXXXXX,  XXXXXXX,          XXXXXXX, XXXXXXX, _______
+    ),
 };
