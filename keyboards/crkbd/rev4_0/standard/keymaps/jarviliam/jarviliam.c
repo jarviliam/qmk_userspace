@@ -29,6 +29,14 @@ enum layers {
 #define SYM_ENT LT(SYM, KC_ENT)
 #define NUM_BSPC LT(NUM, KC_BSPC)
 #define FUN_DEL LT(FUN, KC_DEL)
+
+const uint16_t caps_combo[] PROGMEM = {KC_C, KC_P, COMBO_END};
+
+// clang-format off
+combo_t key_combos[] = {
+    COMBO(caps_combo, CW_TOGG)
+};
+// clang-format on
 //
 // uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 //     switch (keycode) {
