@@ -26,7 +26,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [BASE] = LAYOUT_LR( // Base: Grapite.
           KC_B,         KC_L,    KC_D,    KC_W,    KC_Z, XXXXXXX,    XXXXXXX,    KC_QUOT,    KC_F,      KC_O,   KC_U,            KC_J,
         HOME_N,       HOME_R,  HOME_T, HOME_S,     KC_G, XXXXXXX,    XXXXXXX,    KC_Y,       HOME_H,    HOME_A,  HOME_E,         HOME_I,
-         WIN_Q, ALGR_T(KC_X),    KC_M,    KC_C,    KC_V,                         KC_K,      KC_P,       KC_COMM,  ALGR_T(KC_DOT), WIN_SLSH,
+         WIN_Q, ALGR_T(KC_X),    KC_M,    KC_C,    KC_V,                         KC_K,      KC_P,       KC_COMM,  ALGR_T(KC_DOT), KC_SLASH,
                                KC_ESC,  NAV_SPC, KC_TAB,                       SYM_ENT,     NUM_BSPC,    FUN_DEL
     ),
 
@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [FUN] = LAYOUT_LR( // Function
         KC_F12,    KC_F7,     KC_F8,   KC_F9,    KC_PSCR,  QK_BOOT,          XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX,
-        KC_F11,    KC_F4,      KC_F5,   KC_F6,    KC_SCRL,  XXXXXXX,          XXXXXXX, XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT,  KC_LGUI,
+        KC_F11,    KC_F4,      KC_F5,   KC_F6,    KC_SCRL,  DB_TOGG,          XXXXXXX, XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT,  KC_LGUI,
         KC_F10,    KC_F1,     KC_F2,     KC_F3,    KC_PAUS,                             XXXXXXX, XXXXXXX, XXXXXXX, KC_ALGR, XXXXXXX,
                                               KC_APP,  KC_SPC,  KC_TAB,          XXXXXXX, XXXXXXX, _______
     ),
