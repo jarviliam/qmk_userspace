@@ -1,4 +1,4 @@
-#include "keyboard.h"
+
 enum layers {
     BASE,
     SYM,
@@ -7,6 +7,7 @@ enum layers {
     NAV,
     WIN,
     RSYM,
+    EXP,
 };
 
 #define HOME_N LGUI_T(KC_N)
@@ -17,6 +18,8 @@ enum layers {
 #define HOME_A LCTL_T(KC_A)
 #define HOME_E LALT_T(KC_E)
 #define HOME_I LGUI_T(KC_I)
+
+#define TOG_EXP DF(EXP)
 
 #define WIN_Q LT(WIN, KC_Q)
 #define WIN_SLSH LT(WIN, KC_SLSH)

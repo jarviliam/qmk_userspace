@@ -24,7 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [BASE] = LAYOUT_LR( // Base: Grapite.
-          KC_B,         KC_L,    KC_D,    KC_W,    KC_Z, XXXXXXX,    XXXXXXX,    KC_QUOT,    KC_F,      KC_O,   KC_U,            KC_J,
+          KC_B,         KC_L,    KC_D,    KC_W,    KC_Z, XXXXXXX,    TOG_EXP,    KC_QUOT,    KC_F,      KC_O,   KC_U,            KC_J,
         HOME_N,       HOME_R,  HOME_T, HOME_S,     KC_G, XXXXXXX,    XXXXXXX,    KC_Y,       HOME_H,    HOME_A,  HOME_E,         HOME_I,
          WIN_Q, ALGR_T(KC_X),    KC_M,    KC_C,    KC_V,                         KC_K,      KC_P,       KC_COMM,  ALGR_T(KC_DOT), KC_SLASH,
                                KC_ESC,  NAV_SPC, KC_TAB,                       SYM_ENT,     NUM_BSPC,    FUN_DEL
@@ -65,9 +65,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                               XXXXXXX,  XXXXXXX,  XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX
     ),
     [RSYM] = LAYOUT_LR( // Revised Symbol
-        XXXXXXX,    KC_LABK,     KC_RABK,   KC_BSLS,    KC_GRV,  XXXXXXX,          XXXXXXX, KC_AMPR, KC_MINS,  KC_LBRC, KC_RBRC, _______,
-        KC_EXLM,    KC_MINS,    KC_PLUS,   KC_EQL,    KC_HASH,  XXXXXXX,          XXXXXXX, KC_PIPE, KC_COLN, KC_LPRN, KC_RPRN,  KC_PERC,
-        XXXXXXX, KC_SLSH,   KC_ASTR, KC_CIRC,  XXXXXXX,                                     KC_TILD, KC_DLR, KC_LCBR, KC_RCBR, _______,
+        KC_QUOT,    KC_LABK,     KC_RABK,   KC_MINS,    KC_PIPE,  XXXXXXX,          XXXXXXX, KC_CIRC,KC_LCBR, KC_RBRC, KC_DLR, _______,
+        KC_EXLM,    KC_ASTR,    KC_PLUS,   KC_SLASH,    KC_EQL,  XXXXXXX,          XXXXXXX, KC_HASH, KC_LPRN, KC_RPRN, KC_SEMICOLON,  KC_DQUO,
+        KC_TILD, KC_PLUS,   KC_LBRC, KC_RBRC,  KC_PERC,                                     KC_AT, KC_COLN, KC_COMM, KC_DOT, KC_QUOT,
                                               XXXXXXX,  XXXXXXX,  XXXXXXX,          XXXXXXX, XXXXXXX, _______
+    ),
+    [EXP] = LAYOUT_LR( // Base: Experimental.
+          KC_B,         KC_L,    KC_D,    KC_W,    KC_Z, XXXXXXX,    XXXXXXX,    KC_QUOT,    KC_F,      KC_O,   KC_U,            KC_J,
+        LALT_T(KC_N),   LT(RSYM,KC_R),  LT(NAV,KC_T), LSFT_T(KC_S),     KC_G, XXXXXXX,    XXXXXXX,    KC_Y,       LSFT_T(KC_H),    LT(NUM,KC_A),  LT(RSYM,KC_E), LALT_T(KC_I),
+         LGUI_T(KC_Q), LT(WIN,KC_X),    KC_M,    KC_C,    KC_V,                         KC_K,      LCTL_T(KC_P),       KC_COMM,  KC_DOT, LGUI_T(KC_SLASH),
+                               KC_ESC,  KC_SPC, KC_TAB,                       KC_ENT,     KC_BSPC,    FUN_DEL
     ),
 };
