@@ -6,7 +6,7 @@
         "max_items": 20,
         "infer_type_from_branch": true,
         "append_emoji_to_label": false,
-        "append_emoji_to_commit": false,
+        "append_emoji_to_commit": true,
         "emoji_commit_position": "Start",
         "options": [
             {
