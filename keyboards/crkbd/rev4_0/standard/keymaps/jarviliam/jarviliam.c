@@ -17,7 +17,7 @@ enum layers {
 #define HOME_H LSFT_T(KC_H)
 #define HOME_A LCTL_T(KC_A)
 #define HOME_E LALT_T(KC_E)
-#define HOME_I LGUI_T(KC_I)
+#define HOME_I LT(NUM, KC_I)
 
 #define TOG_EXP DF(EXP)
 
@@ -35,9 +35,9 @@ const uint16_t paste_combo[] PROGMEM = {KC_M, KC_C, COMBO_END};
 
 // clang-format off
 combo_t key_combos[] = {
-    COMBO(caps_combo, CW_TOGG)
-    COMBO(copy_combo, L_GUI_T(KC_C))
-    COMBO(paste_combo, L_GUI_T(KC_V))
+    COMBO(caps_combo, CW_TOGG),
+    COMBO(copy_combo, LGUI_T(KC_C)),
+    COMBO(paste_combo, LGUI_T(KC_V))
 };
 
 #ifdef CHORDAL_HOLD
