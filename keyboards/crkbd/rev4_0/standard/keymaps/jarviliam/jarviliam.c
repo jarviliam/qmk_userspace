@@ -10,7 +10,7 @@ enum layers {
     EXP,
 };
 
-#define HOME_N LGUI_T(KC_N)
+#define HOME_N LT(WIN, KC_N)
 #define HOME_R LALT_T(KC_R)
 #define HOME_T LCTL_T(KC_T)
 #define HOME_S LSFT_T(KC_S)
@@ -21,7 +21,7 @@ enum layers {
 
 #define TOG_EXP DF(EXP)
 
-#define WIN_Q LT(WIN, KC_Q)
+#define WIN_Q LGUI_T(KC_Q)
 #define WIN_SLSH LT(WIN, KC_SLSH)
 
 #define NAV_SPC LT(NAV, KC_SPC)
@@ -29,11 +29,15 @@ enum layers {
 #define NUM_TAB LT(NUM, KC_TAB)
 #define FUN_QOUT LT(FUN, KC_COMM)
 
-const uint16_t caps_combo[] PROGMEM = {KC_C, KC_P, COMBO_END};
+const uint16_t caps_combo[] PROGMEM  = {KC_C, KC_P, COMBO_END};
+const uint16_t copy_combo[] PROGMEM  = {KC_X, KC_M, COMBO_END};
+const uint16_t paste_combo[] PROGMEM = {KC_M, KC_C, COMBO_END};
 
 // clang-format off
 combo_t key_combos[] = {
     COMBO(caps_combo, CW_TOGG)
+    COMBO(copy_combo, L_GUI_T(KC_C))
+    COMBO(paste_combo, L_GUI_T(KC_V))
 };
 
 #ifdef CHORDAL_HOLD
