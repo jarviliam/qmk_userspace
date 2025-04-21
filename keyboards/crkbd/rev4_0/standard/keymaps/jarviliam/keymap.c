@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_B,         KC_L,    KC_D,    KC_W,    KC_Z, XXXXXXX,    TOG_EXP,    KC_QUOT,    KC_F,      KC_O,   KC_U,            KC_J,
         HOME_N,       HOME_R,  HOME_T, HOME_S,     KC_G, XXXXXXX,    XXXXXXX,    KC_Y,       HOME_H,    HOME_A,  HOME_E,         HOME_I,
          WIN_Q,  ALGR_T(KC_X),    KC_M,    KC_C,    KC_V,                         KC_K,      KC_P,       FUN_QOUT,  ALGR_T(KC_DOT), LGUI_T(KC_SLASH),
-                               KC_ESC,  NAV_SPC,  KC_BACKSPACE,                  SYM_ENT,    QK_REPEAT_KEY, NUM_TAB
+                               KC_ESC,  NAV_SPC,  KC_BACKSPACE,                  SYM_ENT,    QK_REPEAT_KEY, KC_TAB
     ),
 
     [SYM] = LAYOUT_LR( // Symbol
@@ -36,6 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TILD,    KC_EXLM,     KC_AT,     KC_HASH,    KC_PIPE,                             XXXXXXX, XXXXXXX, XXXXXXX, KC_ALGR, XXXXXXX,
                                               KC_LPRN,  KC_RPRN,  KC_UNDS,          _______, XXXXXXX, XXXXXXX
     ),
+
 
     [NUM] = LAYOUT_LR( // Number
         KC_LBRC,    KC_7,     KC_8,   KC_9,    KC_RBRC,  XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX,
