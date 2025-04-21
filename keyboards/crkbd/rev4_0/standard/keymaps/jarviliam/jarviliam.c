@@ -26,7 +26,7 @@ enum layers {
 
 #define NAV_SPC LT(NAV, KC_SPC)
 #define SYM_ENT LT(SYM, KC_ENT)
-#define NUM_BSPC LT(NUM, KC_BSPC)
+#define NUM_TAB LT(NUM, KC_TAB)
 #define FUN_QOUT LT(FUN, KC_COMM)
 
 const uint16_t caps_combo[] PROGMEM = {KC_C, KC_P, COMBO_END};
