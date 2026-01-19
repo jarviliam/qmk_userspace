@@ -19,6 +19,11 @@ enum layers {
 #define HOME_E LALT_T(KC_E)
 #define HOME_I LT(NUM, KC_I)
 
+#define TABLSFT LSFT_T(KC_TAB)
+#define TABRSFT RSFT_T(KC_TAB)
+
+#define TMUXL LCTL_T(KC_SPC)
+
 #define TOG_EXP DF(EXP)
 
 #define WIN_Q LGUI_T(KC_Q)
@@ -28,6 +33,7 @@ enum layers {
 #define SYM_ENT LT(SYM, KC_ENT)
 #define NUM_TAB LT(NUM, KC_TAB)
 #define FUN_QOUT LT(FUN, KC_COMM)
+#define RPT_NUM LT(NUM,QK_REPEAT_KEY)
 
 const uint16_t caps_combo[] PROGMEM  = {KC_C, KC_P, COMBO_END};
 const uint16_t copy_combo[] PROGMEM  = {KC_X, KC_M, COMBO_END};
@@ -48,6 +54,16 @@ bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t *tap_hold_record, u
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
+}
+
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record){
+    switch (keycode) {
+        case HOME_S:
+        case HOME_H:
+            return TAPPING_TERM - 45;
+        default:
+            return TAPPING_TERM;
+    }
 }
 
 void housekeeping_task_user(void) {}

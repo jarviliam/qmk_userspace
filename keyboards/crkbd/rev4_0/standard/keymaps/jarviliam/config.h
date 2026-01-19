@@ -21,7 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 #define QUICK_TAP_TERM 0
-#define TAPPING_TERM 250
+#define TAPPING_TERM 200
 #define TAPPING_TERM_PER_KEY
 #define PERMISSIVE_HOLD
 #define QUICK_TAP_TERM_PER_KEY
