@@ -31,12 +31,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [SYM] = LAYOUT_LR( // Symbol
-        XXXXXXX, KC_GRV,    KC_AT,     KC_COLN,   KC_HASH,    KC_PERC,  XXXXXXX,          XXXXXXX, KC_GRV, KC_LCBR, KC_RCBR , KC_LABK, KC_RABK, XXXXXXX,
-        XXXXXXX, KC_EXLM,    KC_ASTR,      KC_SCLN,   KC_DLR,    KC_PLUS,  XXXXXXX,          XXXXXXX, KC_BSLS, KC_LPRN, KC_RPRN, KC_SCLN,  KC_DQUO, XXXXXXX,
-        XXXXXXX, KC_TILD,    KC_PIPE,     KC_QUES,     KC_EQL,    KC_CIRC,                             KC_PIPE, KC_LBRC, KC_RBRC, KC_DOT, KC_QUOT, XXXXXXX,
-                                              KC_LPRN,  KC_RPRN,  KC_UNDS,          _______, XXXXXXX, XXXXXXX
+        XXXXXXX, XXXXXXX,    KC_AT,     KC_COLN,   KC_HASH,    XXXXXXX,  XXXXXXX,          XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR , KC_DLR,  XXXXXXX, XXXXXXX,
+        XXXXXXX, KC_EXLM,    KC_ASTR,      KC_SCLN,   KC_EQL,    KC_PLUS,  XXXXXXX,          XXXXXXX, KC_PERC, KC_LPRN, KC_RPRN, KC_SCLN,  KC_DQUO, XXXXXXX,
+        XXXXXXX, KC_TILD,    KC_PIPE,     KC_LABK,   KC_RABK,    KC_CIRC,                             KC_GRV, KC_LBRC, KC_RBRC, KC_DOT, KC_QUOT, XXXXXXX,
+                                              XXXXXXX,  XXXXXXX,  KC_UNDS,          _______, XXXXXXX, XXXXXXX
     ),
-
 
     [NUM] = LAYOUT_LR( // Number
         XXXXXXX,KC_LBRC,    KC_7,     KC_8,   KC_9,    KC_RBRC,  XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX,XXXXXXX,
