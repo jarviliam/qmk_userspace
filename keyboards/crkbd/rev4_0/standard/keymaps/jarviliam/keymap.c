@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          TMUXL,   KC_B,         KC_L,    KC_D,    KC_W,    KC_Z,   XXXXXXX,      XXXXXXX,    KC_QUOT,    KC_F,      KC_O,   KC_U,            KC_J, KC_COLN,
         KC_LBRC,    HOME_N,       HOME_R,  HOME_T, HOME_S,     KC_G, XXXXXXX,    XXXXXXX,    KC_Y,       HOME_H,    HOME_A,  HOME_E,         HOME_I, KC_RBRC,
         XXXXXXX,    WIN_Q,  ALGR_T(KC_X),    KC_M,    KC_C,    KC_V,                         KC_K,      KC_P,       KC_COMM,  ALGR_T(KC_DOT), LGUI_T(KC_SLASH), XXXXXXX,
-                               KC_ESC,  NAV_SPC,  KC_BACKSPACE,                  SYM_ENT,    QK_REP, FUN_TAB
+                               KC_ESC,  NAV_SPC,  KC_BACKSPACE,                  QK_REP , SYM_ENT, FUN_TAB
     ),
 
     [SYM] = LAYOUT_LR( // Symbol
