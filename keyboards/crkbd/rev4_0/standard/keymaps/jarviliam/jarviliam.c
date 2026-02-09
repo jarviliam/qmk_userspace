@@ -25,14 +25,14 @@ enum layers {
 #define WIN_Q LGUI_T(KC_Q)
 #define WIN_SLSH LT(WIN, KC_SLSH)
 
-#define NAV_SPC LT(NAV, KC_SPC)
+#define NAV_BACK LT(NAV, KC_BACKSPACE)
+#define SYM_SPC LT(SYM, KC_SPC)
 #define SYM_ENT LT(SYM, KC_ENT)
-#define FUN_TAB LT(FUN, KC_TAB)
 
 const uint16_t caps_combo[] PROGMEM  = {KC_C, KC_P, COMBO_END};
 const uint16_t copy_combo[] PROGMEM  = {HOME_H, HOME_A,QK_REP, COMBO_END};
 const uint16_t paste_combo[] PROGMEM = {KC_P, KC_COMM,QK_REP, COMBO_END};
-const uint16_t save_combo[] PROGMEM = {HOME_R, HOME_T,NAV_SPC, COMBO_END};
+const uint16_t save_combo[] PROGMEM = {HOME_R, HOME_T,SYM_SPC, COMBO_END};
 const uint16_t enter_combo[] PROGMEM = {HOME_A, HOME_E, QK_REP, COMBO_END};
 const uint16_t find_combo[] PROGMEM = {KC_M, KC_C, KC_SPC, COMBO_END};
 const uint16_t undo_combo[] PROGMEM = {ALGR_T(KC_X),KC_M, KC_SPC, COMBO_END};

@@ -27,14 +27,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          TMUXL,   KC_B,         KC_L,    KC_D,    KC_W,    KC_Z,   XXXXXXX,      XXXXXXX,    KC_QUOT,    KC_F,      KC_O,   KC_U,            KC_J, KC_COLN,
         KC_LBRC,    HOME_N,       HOME_R,  HOME_T, HOME_S,     KC_G, XXXXXXX,    XXXXXXX,    KC_Y,       HOME_H,    HOME_A,  HOME_E,         HOME_I, KC_RBRC,
         XXXXXXX,    WIN_Q,  ALGR_T(KC_X),    KC_M,    KC_C,    KC_V,                         KC_K,      KC_P,       KC_COMM,  ALGR_T(KC_DOT), LGUI_T(KC_SLASH), XXXXXXX,
-                               KC_ESC,  NAV_SPC,  KC_BACKSPACE,                  QK_REP , SYM_ENT, FUN_TAB
+                               KC_ESC,  SYM_SPC,  NAV_BACK,                  QK_REP , SYM_ENT, FUN_TAB
     ),
 
     [SYM] = LAYOUT_LR( // Symbol
         XXXXXXX, XXXXXXX,    KC_AT,     KC_COLN,   KC_HASH,    XXXXXXX,  XXXXXXX,          XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR , KC_DLR,  XXXXXXX, XXXXXXX,
         XXXXXXX, KC_EXLM,    KC_ASTR,      KC_SCLN,   KC_EQL,    KC_PLUS,  XXXXXXX,          XXXXXXX, KC_PERC, KC_LPRN, KC_RPRN, KC_SCLN,  KC_DQUO, XXXXXXX,
         XXXXXXX, KC_TILD,    KC_PIPE,     KC_LABK,   KC_RABK,    KC_CIRC,                             KC_GRV, KC_LBRC, KC_RBRC, KC_DOT, KC_QUOT, XXXXXXX,
-                                              XXXXXXX,  XXXXXXX,  KC_UNDS,          _______, XXXXXXX, XXXXXXX
+                                              XXXXXXX,  _______,  KC_UNDS,          XXXXXXX, _______, XXXXXXX
     ),
 
     [NUM] = LAYOUT_LR( // Number
