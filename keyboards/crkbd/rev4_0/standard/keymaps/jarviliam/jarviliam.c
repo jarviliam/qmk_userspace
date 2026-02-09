@@ -48,6 +48,17 @@ combo_t key_combos[] = {
     COMBO(undo_combo, LCTL_T(KC_Z))
 };
 
+const key_override_t dot_key_override = ko_make_basic(MOD_MASK_SHIFT, ALGR_T(KC_DOT), KC_QUES); // Shift . is ?
+const key_override_t comm_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMM, KC_EXLM); // Shift , is !
+const key_override_t slsh_key_override = ko_make_basic(MOD_MASK_SHIFT, LGUI_T(KC_SLASH), KC_BSLS); // Shift / is backslash
+
+
+const key_override_t* key_overrides[] = {
+    &dot_key_override,
+    &comm_key_override,
+    &slsh_key_override,
+};
+
 #ifdef CHORDAL_HOLD
 bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t *tap_hold_record, uint16_t other_keycode, keyrecord_t *other_record) {
     return get_chordal_hold_default(tap_hold_record, other_record);
