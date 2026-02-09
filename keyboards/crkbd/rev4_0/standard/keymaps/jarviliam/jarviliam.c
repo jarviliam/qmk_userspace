@@ -6,8 +6,6 @@ enum layers {
     FUN,
     NAV,
     WIN,
-    RSYM,
-    EXP,
 };
 
 #define HOME_N LT(WIN, KC_N)
@@ -24,26 +22,30 @@ enum layers {
 
 #define TMUXL LCTL_T(KC_SPC)
 
-#define TOG_EXP DF(EXP)
-
 #define WIN_Q LGUI_T(KC_Q)
 #define WIN_SLSH LT(WIN, KC_SLSH)
 
 #define NAV_SPC LT(NAV, KC_SPC)
 #define SYM_ENT LT(SYM, KC_ENT)
-#define NUM_TAB LT(NUM, KC_TAB)
-#define FUN_QOUT LT(FUN, KC_COMM)
-#define RPT_NUM LT(NUM,QK_REPEAT_KEY)
+#define FUN_TAB LT(FUN, KC_TAB)
 
 const uint16_t caps_combo[] PROGMEM  = {KC_C, KC_P, COMBO_END};
-const uint16_t copy_combo[] PROGMEM  = {KC_X, KC_M, COMBO_END};
-const uint16_t paste_combo[] PROGMEM = {KC_M, KC_C, COMBO_END};
+const uint16_t copy_combo[] PROGMEM  = {HOME_H, HOME_A,QK_REP, COMBO_END};
+const uint16_t paste_combo[] PROGMEM = {KC_P, KC_COMM,QK_REP, COMBO_END};
+const uint16_t save_combo[] PROGMEM = {HOME_R, HOME_T,NAV_SPC, COMBO_END};
+const uint16_t enter_combo[] PROGMEM = {HOME_A, HOME_E, QK_REP, COMBO_END};
+const uint16_t find_combo[] PROGMEM = {KC_M, KC_C, KC_SPC, COMBO_END};
+const uint16_t undo_combo[] PROGMEM = {ALGR_T(KC_X),KC_M, KC_SPC, COMBO_END};
 
 // clang-format off
 combo_t key_combos[] = {
     COMBO(caps_combo, CW_TOGG),
-    COMBO(copy_combo, LGUI_T(KC_C)),
-    COMBO(paste_combo, LGUI_T(KC_V))
+    COMBO(copy_combo, LCTL_T(KC_C)),
+    COMBO(paste_combo, LCTL_T(KC_V)),
+    COMBO(enter_combo, KC_ENT),
+    COMBO(save_combo, LCTL_T(KC_S)),
+    COMBO(find_combo, LCTL_T(KC_F)),
+    COMBO(undo_combo, LCTL_T(KC_Z))
 };
 
 #ifdef CHORDAL_HOLD

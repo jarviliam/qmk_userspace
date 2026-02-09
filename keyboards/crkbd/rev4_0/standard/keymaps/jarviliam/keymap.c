@@ -24,16 +24,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [BASE] = LAYOUT_LR( // Base: Graphite.
-         TMUXL,   KC_B,         KC_L,    KC_D,    KC_W,    KC_Z,   XXXXXXX,      TOG_EXP,    KC_QUOT,    KC_F,      KC_O,   KC_U,            KC_J, KC_COLN,
-        KC_LCBR,    HOME_N,       HOME_R,  HOME_T, HOME_S,     KC_G, XXXXXXX,    XXXXXXX,    KC_Y,       HOME_H,    HOME_A,  HOME_E,         HOME_I, KC_RCBR,
-        XXXXXXX,    WIN_Q,  ALGR_T(KC_X),    KC_M,    KC_C,    KC_V,                         KC_K,      KC_P,       FUN_QOUT,  ALGR_T(KC_DOT), LGUI_T(KC_SLASH), XXXXXXX,
-                               KC_ESC,  NAV_SPC,  KC_BACKSPACE,                  SYM_ENT,    RPT_NUM, KC_TAB
+         TMUXL,   KC_B,         KC_L,    KC_D,    KC_W,    KC_Z,   XXXXXXX,      XXXXXXX,    KC_QUOT,    KC_F,      KC_O,   KC_U,            KC_J, KC_COLN,
+        KC_LBRC,    HOME_N,       HOME_R,  HOME_T, HOME_S,     KC_G, XXXXXXX,    XXXXXXX,    KC_Y,       HOME_H,    HOME_A,  HOME_E,         HOME_I, KC_RBRC,
+        XXXXXXX,    WIN_Q,  ALGR_T(KC_X),    KC_M,    KC_C,    KC_V,                         KC_K,      KC_P,       KC_COMM,  ALGR_T(KC_DOT), LGUI_T(KC_SLASH), XXXXXXX,
+                               KC_ESC,  NAV_SPC,  KC_BACKSPACE,                  SYM_ENT,    QK_REP, FUN_TAB
     ),
 
     [SYM] = LAYOUT_LR( // Symbol
-        XXXXXXX,KC_LCBR,    KC_AMPR,     KC_ASTR,   KC_LPRN,    KC_RCBR,  XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX,XXXXXXX,
-        XXXXXXX,KC_COLN,    KC_DLR,      KC_PERC,   KC_CIRC,    KC_PLUS,  XXXXXXX,          XXXXXXX, XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT,  KC_LGUI,XXXXXXX,
-        XXXXXXX,KC_TILD,    KC_EXLM,     KC_AT,     KC_HASH,    KC_PIPE,                             XXXXXXX, XXXXXXX, XXXXXXX, KC_ALGR, XXXXXXX,XXXXXXX,
+        XXXXXXX, KC_GRV,    KC_AT,     KC_COLN,   KC_HASH,    KC_PERC,  XXXXXXX,          XXXXXXX, KC_GRV, KC_LCBR, KC_RCBR , KC_LABK, KC_RABK, XXXXXXX,
+        XXXXXXX, KC_EXLM,    KC_ASTR,      KC_SCLN,   KC_DLR,    KC_PLUS,  XXXXXXX,          XXXXXXX, KC_BSLS, KC_LPRN, KC_RPRN, KC_SCLN,  KC_DQUO, XXXXXXX,
+        XXXXXXX, KC_TILD,    KC_PIPE,     KC_QUES,     KC_EQL,    KC_CIRC,                             KC_PIPE, KC_LBRC, KC_RBRC, KC_DOT, KC_QUOT, XXXXXXX,
                                               KC_LPRN,  KC_RPRN,  KC_UNDS,          _______, XXXXXXX, XXXXXXX
     ),
 
@@ -64,17 +64,5 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX,_______,    KC_LALT,    KC_LCTL,   KC_LSFT,    XXXXXXX,  XXXXXXX,          XXXXXXX, G(S(KC_LEFT)), G(KC_1), G(KC_2), G(KC_3), G(KC_4),G(S(KC_RIGHT)),
         XXXXXXX,XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX,  XXXXXXX,                             XXXXXXX, G(KC_6), G(KC_5), G(KC_4), XXXXXXX,XXXXXXX,
                                               XXXXXXX,  XXXXXXX,  XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX
-    ),
-    [RSYM] = LAYOUT_LR( // Revised Symbol
-        XXXXXXX,KC_QUOT,    KC_LABK,     KC_RABK,   KC_MINS,    KC_PIPE,  XXXXXXX,          XXXXXXX, KC_CIRC,KC_LCBR, KC_RBRC, KC_DLR, _______,XXXXXXX,
-        XXXXXXX,KC_EXLM,    KC_ASTR,    KC_PLUS,   KC_SLASH,    KC_EQL,  XXXXXXX,          XXXXXXX, KC_HASH, KC_LPRN, KC_RPRN, KC_SEMICOLON,  KC_DQUO,XXXXXXX,
-        XXXXXXX,KC_TILD, KC_PLUS,   KC_LBRC, KC_RBRC,  KC_PERC,                                     KC_AT, KC_COLN, KC_COMM, KC_DOT, KC_QUOT,XXXXXXX,
-                                              XXXXXXX,  XXXXXXX,  XXXXXXX,          XXXXXXX, XXXXXXX, _______
-    ),
-    [EXP] = LAYOUT_LR( // Base: Experimental.
-          XXXXXXX,KC_B,         KC_L,    KC_D,    KC_W,    KC_Z, XXXXXXX,    XXXXXXX,    KC_QUOT,    KC_F,      KC_O,   KC_U,            KC_J,XXXXXXX,
-        XXXXXXX,LALT_T(KC_N),   LT(RSYM,KC_R),  LT(NAV,KC_T), LSFT_T(KC_S),     KC_G, XXXXXXX,    XXXXXXX,    KC_Y,       LSFT_T(KC_H),    LT(NUM,KC_A),  LT(RSYM,KC_E), LALT_T(KC_I),XXXXXXX,
-         XXXXXXX,LGUI_T(KC_Q), LT(WIN,KC_X),    KC_M,    KC_C,    KC_V,                         KC_K,      LCTL_T(KC_P),       KC_COMM,  KC_DOT, LGUI_T(KC_SLASH),XXXXXXX,
-                               KC_ESC,  KC_SPC, KC_TAB,                       KC_ENT,     KC_BSPC,    QK_REPEAT_KEY
     ),
 };
